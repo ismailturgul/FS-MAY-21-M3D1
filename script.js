@@ -151,7 +151,20 @@ isNotNumber1or3();
 11)
 
 Create a function to find the longest string from a given array of strings.
+*/
+const longestString = function () {
+  let findLongestString = ["hi", "how", "you´re", "doing"];
+  let longestString = "0";
+  for (let i = 0; i < findLongestString.length; i++) {
+    currentString = findLongestString[i];
+    if (currentString.length > longestString.length)
+      longestString = currentString;
+  }
+  console.log(longestString + " - is the longest string in the array");
+};
 
+longestString();
+/*
 12)
 
 Create a function to find the types of a given angle.
