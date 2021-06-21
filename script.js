@@ -90,6 +90,20 @@ Create a function to create a new string of specified copies (positive number) o
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
+const displayCityNames = function () {
+  let citys = ["New York", "Guadalajara", "Omotepe", "Los Angelos"];
+
+  for (let i = 0; i < citys.length; i++) {
+    currentCity = citys[i];
+    if (
+      currentCity.slice(0, 3) === "New" ||
+      currentCity.slice(0, 3) === "Los"
+    ) {
+      console.log(currentCity);
+    }
+  }
+};
+displayCityNames();
 
 /*
 8)
