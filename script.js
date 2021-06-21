@@ -243,7 +243,22 @@ largestEvenNumber();
 Create a function to check from two given integers, whether one is positive and another one is negative.
 
 16)
+*/
+function checkPositiveNegativeNumbers(number1, number2) {
+  if (number1 >= 0) {
+    console.log("the number is positive");
+  } else {
+    console.log("the number is negative");
+  }
+  if (number2 >= 0) {
+    console.log("the number is positive");
+  } else {
+    console.log("the number is negative");
+  }
+}
 
+checkPositiveNegativeNumbers(1, -2);
+/*
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
 
 17)
