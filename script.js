@@ -311,9 +311,9 @@ this would be a "DiegoRiccardo".
 this would be "34".
 */
 function numberAsNames(n) {
-  let diego = 22;
-  let riccardo = 12;
-  let steffano = 8;
+  let diego = 3;
+  let riccardo = 5;
+  let steffano = 7;
   for (let i = 1; i <= n; i++) {
     if (diego % i == 0 && riccardo % i == 0 && steffano % i == 0) {
       console.log("Diego Riccardo Steffano");
@@ -335,9 +335,20 @@ function numberAsNames(n) {
   }
 }
 
-numberAsNames(24);
+numberAsNames(7);
 /*
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
-
 */
+function acronymIt() {
+  let string = "Spliddy Splitts Super Script";
+  let acronym = "";
+  var separetedWords = string.split(" ");
+  for (let i = 0; i < separetedWords.length; i++) {
+    currentString = separetedWords[i];
+    firstletters = currentString.slice(0, 1);
+    acronym += firstletters.toUpperCase();
+  }
+  console.log(acronym);
+}
+acronymIt();
