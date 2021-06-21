@@ -174,17 +174,72 @@ Types of angles:
     Right angle: An 90 degree angle.
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
+*/
+const typesOfAngle = function (angle) {
+  if (angle < 90) {
+    return "Acute angle.";
+  }
+  if (angle === 90) {
+    return "Right angle.";
+  }
+  if (angle < 180) {
+    return "Obtuse angle.";
+  }
+  if (angle === 180) {
+    return "Straight angle.";
+  }
+};
+console.log(typesOfAngle(70));
+console.log(typesOfAngle(90));
+console.log(typesOfAngle(140));
+console.log(typesOfAngle(180));
 
+/*
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
+*/
+function greatestElement() {
+  let differentNumbers = [1, 50, 3, 40, 5, 60, 7, 8, 9];
+  let greatestNumber = differentNumbers[0];
+  let indexOfNumber = 0;
 
+  for (let i = 0; i < differentNumbers.length; i++) {
+    let currentNumber = differentNumbers[i];
+    if (greatestNumber < currentNumber) {
+      greatestNumber = currentNumber;
+      indexOfNumber = i;
+    }
+  }
+  console.log(indexOfNumber + " is the index of the highest element");
+}
+greatestElement();
+/*
 14)
 
 Create a function to get the largest even number from an array of integers.
 
 15)
-
+*/
+function largestEvenNumber() {
+  let arrayOfNumbers = [2, 4, 5, 6, 8, 10, 1];
+  let evenNumbers = [];
+  let largestEvennumber = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 2 === 0) {
+      evenNumbers.push(arrayOfNumbers[i]);
+      for (let j = 0; j < evenNumbers.length; j++) {
+        if (evenNumbers[j] > largestEvennumber) {
+          largestEvennumber = evenNumbers[j];
+        }
+      }
+    }
+  }
+  console.log(evenNumbers + "the list with the even numbers");
+  console.log(largestEvennumber + "this is the largest number in the array");
+}
+largestEvenNumber();
+/*
 Create a function to check from two given integers, whether one is positive and another one is negative.
 
 16)
