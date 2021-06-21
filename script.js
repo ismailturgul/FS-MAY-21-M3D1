@@ -109,19 +109,45 @@ displayCityNames();
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
-
+const calculateTheSumOfArray = function () {
+  let numbersInArray = [1, 2, 3];
+  console.log(numbersInArray.reduce((a, b) => a + b));
+};
+calculateTheSumOfArray();
 /*
 
 9)
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
 
+const isNumber1or3 = function () {
+  let arrayWith2Numbers = [5, 2];
+  console.log(arrayWith2Numbers);
+  if (arrayWith2Numbers.includes(1 || 3)) {
+    console.log("it cointains the number 1 or 3");
+  } else {
+    console.log("Tested if there is a 1 or 3, and it isn´t.");
+  }
+};
+isNumber1or3();
 /*
 
 10)
 
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+*/
 
+const isNotNumber1or3 = function () {
+  let arrayWith2Numbers = [4, 2];
+  console.log(arrayWith2Numbers);
+  if (!arrayWith2Numbers.includes(1 || 3)) {
+    console.log("it  dont cointains the number 1 or 3");
+  }
+};
+
+isNotNumber1or3();
+
+/*
 11)
 
 Create a function to find the longest string from a given array of strings.
